@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.HelloController">
+   <top>
+      <HBox maxWidth="-Infinity" prefHeight="0.0" prefWidth="620.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="1934.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+               <HBox.margin>
+                  <Insets left="-1300.0" />
+               </HBox.margin>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox fillWidth="false" maxHeight="-Infinity" prefHeight="711.0" prefWidth="196.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <TitledPane animated="false" prefHeight="270.0" prefWidth="196.0" text="Samochód">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="194.0" style="-fx-background-color: #ADD8E6;">
+                     <children>
+                        <TextField fx:id="model" editable="false" layoutX="47.0" layoutY="2.0" prefHeight="26.0" prefWidth="142.0" />
+                        <Label layoutX="7.0" layoutY="6.0" text="Model" />
+                        <Label layoutX="4.0" layoutY="35.0" text="Nr Rejestracyjny" />
+                        <TextField fx:id="NrRejestr" editable="false" layoutX="89.0" layoutY="31.0" prefHeight="26.0" prefWidth="102.0" />
+                        <Label layoutX="9.0" layoutY="62.0" text="Waga" />
+                        <Label layoutX="10.0" layoutY="91.0" text="Prędkość" />
+                        <TextField fx:id="waga" editable="false" layoutX="40.0" layoutY="58.0" prefHeight="26.0" prefWidth="152.0" />
+                        <TextField fx:id="V" editable="false" layoutX="58.0" layoutY="87.0" prefHeight="26.0" prefWidth="134.0" />
+                        <Button fx:id="wlaczButton" layoutX="34.0" layoutY="123.0" mnemonicParsing="false" onAction="#onWlacz" text="Włącz" />
+                        <Button fx:id="wylaczButton" layoutX="110.0" layoutY="123.0" mnemonicParsing="false" onAction="#onWylacz" text="Wyłącz" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Skrzynia Biegów">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="194.0" style="-fx-background-color: #ADD8E6;">
+                     <children>
+                        <TextField fx:id="skrzynianazwa" editable="false" layoutX="47.0" layoutY="2.0" prefHeight="26.0" prefWidth="143.0" />
+                        <Label layoutX="7.0" layoutY="6.0" text="Nazwa" />
+                        <Label layoutX="4.0" layoutY="35.0" text="Cena" />
+                        <TextField fx:id="skrzyniaCena" editable="false" layoutX="33.0" layoutY="31.0" prefHeight="26.0" prefWidth="155.0" />
+                        <Label layoutX="9.0" layoutY="62.0" text="Waga" />
+                        <Label layoutX="10.0" layoutY="91.0" text="Bieg" />
+                        <TextField fx:id="skrzyniaWaga" editable="false" layoutX="40.0" layoutY="58.0" prefHeight="26.0" prefWidth="147.0" />
+                        <TextField fx:id="bieg" editable="false" layoutX="32.0" layoutY="87.0" prefHeight="26.0" prefWidth="155.0" />
+                        <Button fx:id="zwiekszBieg" layoutX="8.0" layoutY="123.0" mnemonicParsing="false" onAction="#onZwBieg" text="Zwiększ bieg" />
+                        <Button fx:id="zmniejszBieg" layoutX="95.0" layoutY="123.0" mnemonicParsing="false" onAction="#onZmBieg" text="Zmniejsz bieg" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Silnik">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="194.0" style="-fx-background-color: #ADD8E6;">
+                     <children>
+                        <TextField fx:id="silniknazwa" editable="false" layoutX="47.0" layoutY="2.0" prefHeight="26.0" prefWidth="142.0" />
+                        <Label layoutX="7.0" layoutY="6.0" text="Nazwa" />
+                        <Label layoutX="4.0" layoutY="35.0" text="Cena" />
+                        <TextField fx:id="silnikCena" editable="false" layoutX="33.0" layoutY="31.0" prefHeight="26.0" prefWidth="155.0" />
+                        <Label layoutX="9.0" layoutY="62.0" text="Waga" />
+                        <Label layoutX="10.0" layoutY="91.0" text="Obroty" />
+                        <TextField fx:id="silnikWaga" editable="false" layoutX="40.0" layoutY="58.0" prefHeight="26.0" prefWidth="148.0" />
+                        <TextField fx:id="obroty" editable="false" layoutX="49.0" layoutY="87.0" prefHeight="26.0" prefWidth="139.0" />
+                        <Button fx:id="dodajGaz" layoutX="29.0" layoutY="123.0" mnemonicParsing="false" onAction="#onDodajGaz" text="Gaz " />
+                        <Button fx:id="odejmijGaz" layoutX="115.0" layoutY="123.0" mnemonicParsing="false" onAction="#onUjmijGaz" text="Ujmij gazu" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Sprzęgło">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="238.0" prefWidth="194.0" style="-fx-background-color: #ADD8E6;">
+                     <children>
+                        <TextField fx:id="sprzegloNazwa" editable="false" layoutX="43.0" layoutY="2.0" prefHeight="26.0" prefWidth="146.0" />
+                        <Label layoutX="7.0" layoutY="6.0" text="Nazwa" />
+                        <Label layoutX="4.0" layoutY="35.0" text="Cena" />
+                        <TextField fx:id="sprzegloCena" editable="false" layoutX="34.0" layoutY="31.0" prefHeight="26.0" prefWidth="158.0" />
+                        <Label layoutX="9.0" layoutY="62.0" text="Waga" />
+                        <Label layoutX="10.0" layoutY="91.0" text="Stan" />
+                        <TextField fx:id="sprzegloWaga" editable="false" layoutX="43.0" layoutY="58.0" prefHeight="26.0" prefWidth="142.0" />
+                        <TextField fx:id="sprzegloStan" editable="false" layoutX="37.0" layoutY="87.0" prefHeight="26.0" prefWidth="150.0" />
+                        <Button fx:id="SzprzegloON" layoutY="122.0" mnemonicParsing="false" onAction="#onSprzengloON" text="Wcisnij Sprzegło">
+                           <font>
+                              <Font size="10.0" />
+                           </font></Button>
+                        <Button fx:id="SzprzegloOFF" layoutX="101.0" layoutY="122.0" mnemonicParsing="false" onAction="#onSprzengloOFF" text="Zwojnij Sprzęgło">
+                           <font>
+                              <Font size="10.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="mapa" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ADD8E6;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="500.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Samochod:" />
+                  <ComboBox fx:id="comboBox" prefWidth="150.0" />
+                  <Button fx:id="dodSam" mnemonicParsing="false" onAction="#dodajSamochod" text="Dodaj" />
+                  <Button fx:id="usSam" mnemonicParsing="false" onAction="#usunSamochod" text="Usun" />
+               </children>
+            </HBox>
+            <ImageView fx:id="carImageView" fitWidth="1513.0" nodeOrientation="RIGHT_TO_LEFT">
+               <image>
+                  <Image url="@pngtree-vector-car-icon-png-image_3989845.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
